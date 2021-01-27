@@ -13,10 +13,15 @@ public class AuthorizationPageObject extends MainPageObject{
         super(driver);
     }
 
-    public void clickAuthButton(){
-        this.waitForElementPresent(LOGIN_BUTTON, "Cannot find auth button ",10);
-        this.waitForElementAndClick(LOGIN_BUTTON, "Cannot find and click auth button ",5);
-    }
+//    public void clickAuthButton(){
+//        this.waitForElementPresent(LOGIN_BUTTON, "Cannot find auth button ",10);
+//        this.waitForElementAndClick(LOGIN_BUTTON, "Cannot find and click auth button ",5);
+
+        public void clickAuthButton() throws InterruptedException {
+            Thread.sleep(5000);
+            this.waitForElementPresent(LOGIN_BUTTON, "Cannot find auth button ",10);
+            this.waitForElementAndClick(LOGIN_BUTTON, "Cannot call auth menu", 10);
+        }
 
     public void enterLoginData(String login, String password)
     {

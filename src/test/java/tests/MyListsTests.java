@@ -9,8 +9,6 @@ import lib.ui.factories.NavigationUIFactory;
 import lib.ui.factories.SearchPageObjectFactory;
 import org.junit.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class MyListsTests extends CoreTestCase {
 
     private static String name_of_folder = "Learning programming";
@@ -19,7 +17,7 @@ public class MyListsTests extends CoreTestCase {
             password = "javadova93";
 
     @Test
-    public void testSaveFirstArticleToMyList(){
+    public void testSaveFirstArticleToMyList() throws InterruptedException {
         SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
 
         SearchPageObject.initSearchInput();
@@ -39,6 +37,7 @@ public class MyListsTests extends CoreTestCase {
         if(Platform.getInstance().isMW()){
             AuthorizationPageObject Auth = new AuthorizationPageObject(driver);
             Auth.clickAuthButton();
+            Thread.sleep(2000);
             Auth.enterLoginData(login, password);
             Auth.submitForm();
 
@@ -50,8 +49,7 @@ public class MyListsTests extends CoreTestCase {
 
             ArticlePageObject.addArticleToMySaved();
         }
-
-
+        
         ArticlePageObject.closeArticle();
 
         if(Platform.getInstance().isIOS()){
@@ -77,7 +75,7 @@ public class MyListsTests extends CoreTestCase {
 
     //Ex5, Ex11
     @Test
-    public void testSaveTwoArticleAndDeleteOne(){
+    public void testSaveTwoArticleAndDeleteOne() throws InterruptedException {
         SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
         String title_article_one = "British journalist";
         String title_article_two = "British archaeologist";
@@ -91,8 +89,10 @@ public class MyListsTests extends CoreTestCase {
         //Открываем первую статью
         if(Platform.getInstance().isAndroid()) {
             SearchPageObject.clickByArticleWithSubstring(title_article_one);
-        } else {
+        } else if (Platform.getInstance().isIOS()){
             SearchPageObject.clickByArticleWithSubstring(search_line_find_one);
+        } else {
+            SearchPageObject.clickByArticleWithSubstringByTitle(search_line_find_one);
         }
 
         //Ожидаем появления первой статьи
@@ -103,11 +103,27 @@ public class MyListsTests extends CoreTestCase {
         if (Platform.getInstance().isAndroid()){
             ArticlePageObject.addArticleToMyList(name_of_folder);
         } else {
+            Thread.sleep(4000);
             ArticlePageObject.addArticleToMySaved();
         }
 
-        //закрываем первую статью
-        ArticlePageObject.closeArticle();
+        //Авторизуемся на mobile web
+        if(Platform.getInstance().isMW()) {
+            AuthorizationPageObject Auth = new AuthorizationPageObject(driver);
+            Auth.clickAuthButton();
+            Thread.sleep(4000);
+            Auth.enterLoginData(login, password);
+            Auth.submitForm();
+        }
+        if(Platform.getInstance().isMW()) {
+            ArticlePageObject.addArticleToMySaved();
+        }
+
+
+        //закрываем первую статью для ios и android
+        if(Platform.getInstance().isIOS() || Platform.getInstance().isAndroid()) {
+            ArticlePageObject.closeArticle();
+        }
 
         //В iOS отменяем предыдущий поиск
         if(Platform.getInstance().isIOS()){
@@ -139,6 +155,7 @@ public class MyListsTests extends CoreTestCase {
 
         //идем в My List
         NavigationUI NavigationUI = NavigationUIFactory.get(driver);
+        NavigationUI.openNavigation();
         NavigationUI.clickMyLists();
 
         //закрываем на ios попап sync
@@ -154,13 +171,21 @@ public class MyListsTests extends CoreTestCase {
         }
 
         //удаляем вторую(последнюю) статью
-        MyListsPageObject.swipeByArticleToDelete(title_article_two);
+        if(Platform.getInstance().isIOS() || Platform.getInstance().isAndroid()) {
+            MyListsPageObject.swipeByArticleToDelete(title_article_two);
+        } else{
+            MyListsPageObject.swipeByArticleToDelete(search_line_find_two);
+        }
 
         //убеждаемся что осталась первая статья
-        MyListsPageObject.waitForArticleAppearByTitle(title_article_one);
+        if(Platform.getInstance().isIOS() || Platform.getInstance().isAndroid()) {
+            MyListsPageObject.waitForArticleAppearByTitle(title_article_one);
+        } else {
+            MyListsPageObject.waitForArticleAppearByTitle(search_line_find_one);
+        }
 
         //проверяем что удалена верная статья
-        if(Platform.getInstance().isAndroid()){
+        if(Platform.getInstance().isAndroid() || Platform.getInstance().isMW()) {
         String title_expected = MyListsPageObject.getArticleTitleMyList();
         MyListsPageObject.clickArticleByTitle(title_article_one);
 

@@ -30,7 +30,7 @@ abstract public class ArticlePageObject extends MainPageObject {
 
     public WebElement waitForTitleElement()
     {
-        return this.waitForElementPresent(TITLE, "Cannot find article on page", 15);
+        return this.waitForElementPresent(TITLE, "Cannot find article on page", 20);
     }
 
     public String getArticleTitle()
@@ -157,15 +157,15 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
-    public void addArticleToMySaved()
+    public void addArticleToMySaved() throws InterruptedException
     {
         if(Platform.getInstance().isMW()){
             this.removeArticleFromSavedIfItAdded();
         }
-
             this.waitForElementAndClick(
                     OPTIONS_ADD_TO_MY_LIST_BUTTON,
                     "Cannot find options button 'Add to my list'",
                     5);
+        Thread.sleep(4000);
     }
 }
