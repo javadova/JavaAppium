@@ -1,6 +1,7 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import lib.Platform;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -28,14 +29,17 @@ abstract public class ArticlePageObject extends MainPageObject {
         super(driver);
     }
 
+    @Step("Waiting title element on the page")
     public WebElement waitForTitleElement()
     {
         return this.waitForElementPresent(TITLE, "Cannot find article on page", 20);
     }
 
+    @Step("Get article title")
     public String getArticleTitle()
     {
         WebElement title_element = waitForTitleElement();
+        screenshot(this.takeScreenshot("article_title"));
         if (Platform.getInstance().isAndroid()){
             return title_element.getAttribute("text");
         } else if (Platform.getInstance().isIOS()){
@@ -45,6 +49,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Swipe to footer")
     public void swipeToFooter()
     {
         if (Platform.getInstance().isAndroid()){
@@ -65,6 +70,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Add article to My List")
     public void addArticleToMyList(String name_of_folder)
     {
         this.waitForElementAndClick(
@@ -100,6 +106,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    @Step("Add article to My List By Name of article")
     public void addArticleToMyListToFolderByName(String name_of_folder)
     {
         this.waitForElementAndClick(
@@ -120,6 +127,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    @Step("Remove Article from Saved if it has been added")
     public void removeArticleFromSavedIfItAdded()
     {
         if(this.isElementPresent(OPTIONS_REMOVE_FROM_MY_LIST_BUTTON)){
@@ -136,6 +144,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Close article")
     public void closeArticle()
     {
         if(Platform.getInstance().isIOS() || Platform.getInstance().isAndroid()) {
@@ -149,6 +158,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Waiting article title present on the page")
     public void assertArticleTitlePresent()
     {
         this.assertElementPresent(
@@ -157,6 +167,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    @Step("Add article to My Saved")
     public void addArticleToMySaved() throws InterruptedException
     {
         if(Platform.getInstance().isMW()){

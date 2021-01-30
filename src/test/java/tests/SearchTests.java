@@ -4,6 +4,7 @@ import lib.CoreTestCase;
 import lib.ui.MainPageObject;
 import lib.ui.SearchPageObject;
 import lib.ui.factories.SearchPageObjectFactory;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -36,7 +37,7 @@ public class SearchTests extends CoreTestCase {
         SearchPageObject.typeSearchLine(search_line);
         int amount_of_search_results = SearchPageObject.getAmmountOfFoundArticle();
 
-        assertTrue(
+        Assert.assertTrue(
                 "We found a few results",
                 amount_of_search_results >0
         );
@@ -62,7 +63,7 @@ public class SearchTests extends CoreTestCase {
         String search_line = "Appium";
         SearchPageObject.typeSearchLine(search_line);
         int amount_of_search_results = SearchPageObject.getAmmountOfFoundArticle();
-        assertTrue(
+        Assert.assertTrue(
                 "Find results less than 2",
                 amount_of_search_results >= 2
         );
