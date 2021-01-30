@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: tests.MyListsTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 90.698 s <<< FAILURE! - in tests.MyListsTests
+testSaveTwoArticleAndDeleteOne(tests.MyListsTests)  Time elapsed: 57.628 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Cannot find article with title Humfry Payone
+ (tried for 15 second(s) with 500 milliseconds interval)
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne_aroundBody2(MyListsTests.java:191)
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne(MyListsTests.java:93)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //ul[contains(@class, 'watchlist')]//h3[contains(text(),'Humfry Payone')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'MacBook-Air-Elvira.local', ip: 'fe80:0:0:0:ff:51ba:38ec:2f32%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: driver.version: unknown
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne_aroundBody2(MyListsTests.java:191)
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne(MyListsTests.java:93)
+
+testSaveFirstArticleToMyList(tests.MyListsTests)  Time elapsed: 32.743 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: Cannot click button to remove article from saved
+ (tried for 5 second(s) with 500 milliseconds interval)
+	at tests.MyListsTests.testSaveFirstArticleToMyList_aroundBody0(MyListsTests.java:82)
+	at tests.MyListsTests.testSaveFirstArticleToMyList(MyListsTests.java:30)
+Caused by: org.openqa.selenium.InvalidSelectorException: 
+invalid selector: Unable to locate an element with the xpath expression //ul[contains(@class, 'watchlist')]//h3[contains(text(),'Java (programming language)')]/../../[contains(@class, 'watched')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//ul[contains(@class, 'watchlist')]//h3[contains(text(),'Java (programming language)')]/../../[contains(@class, 'watched')]' is not a valid XPath expression.
+  (Session info: chrome=88.0.4324.96)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'MacBook-Air-Elvira.local', ip: 'fe80:0:0:0:ff:51ba:38ec:2f32%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/zb/f4h_2h196bn...}, goog:chromeOptions: {debuggerAddress: localhost:50223}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 55a746b19591dc7c2537c4bdf47312a4
+*** Element info: {Using=xpath, value=//ul[contains(@class, 'watchlist')]//h3[contains(text(),'Java (programming language)')]/../../[contains(@class, 'watched')]}
+	at tests.MyListsTests.testSaveFirstArticleToMyList_aroundBody0(MyListsTests.java:82)
+	at tests.MyListsTests.testSaveFirstArticleToMyList(MyListsTests.java:30)
+

@@ -56,6 +56,11 @@ public class ArticleTests extends CoreTestCase {
 
     //Ex6
     @Test
+    @Features(value = {@Feature(value = "Article")})
+    @DisplayName("Check Article has a title")
+    @Description("Open article and check it has a title")
+    @Step("Starting test testAssertArticleTitle")
+    @Severity(value = SeverityLevel.MINOR)
     public void testAssertArticleTitle(){
         SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
         SearchPageObject.initSearchInput();

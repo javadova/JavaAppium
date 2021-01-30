@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.SearchTests" time="18.686" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.MyListsTests" time="90.698" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -17,9 +17,9 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="/Users/elvira/JavaAppium/target/surefire/surefirebooter4006567907192192391.jar /Users/elvira/JavaAppium/target/surefire 2021-01-30T12-26-57_176-jvmRun1 surefire6029977659338790766tmp surefire_03802882602355550253tmp"/>
+    <property name="sun.java.command" value="/Users/elvira/JavaAppium/target/surefire/surefirebooter2871857128058816182.jar /Users/elvira/JavaAppium/target/surefire 2021-01-30T12-28-30_048-jvmRun1 surefire1485870197467676200tmp surefire_04854042703928392335tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="test" value="SearchTests"/>
+    <property name="test" value="MyListsTests"/>
     <property name="surefire.test.class.path" value="/Users/elvira/JavaAppium/target/test-classes:/Users/elvira/JavaAppium/target/classes:/Users/elvira/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/elvira/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/elvira/.m2/repository/io/appium/java-client/6.1.0/java-client-6.1.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-java/3.12.0/selenium-java-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.12.0/selenium-chrome-driver-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.12.0/selenium-edge-driver-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.12.0/selenium-firefox-driver-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.12.0/selenium-ie-driver-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.12.0/selenium-opera-driver-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.12.0/selenium-safari-driver-3.12.0.jar:/Users/elvira/.m2/repository/net/bytebuddy/byte-buddy/1.8.3/byte-buddy-1.8.3.jar:/Users/elvira/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/elvira/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/Users/elvira/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/elvira/.m2/repository/com/google/guava/guava/23.6-jre/guava-23.6-jre.jar:/Users/elvira/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/elvira/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/elvira/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/elvira/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/elvira/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/elvira/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/elvira/.m2/repository/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar:/Users/elvira/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar:/Users/elvira/.m2/repository/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar:/Users/elvira/.m2/repository/com/google/code/gson/gson/2.8.4/gson-2.8.4.jar:/Users/elvira/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/elvira/.m2/repository/cglib/cglib/3.2.6/cglib-3.2.6.jar:/Users/elvira/.m2/repository/org/ow2/asm/asm/6.0/asm-6.0.jar:/Users/elvira/.m2/repository/org/apache/ant/ant/1.9.6/ant-1.9.6.jar:/Users/elvira/.m2/repository/org/apache/ant/ant-launcher/1.9.6/ant-launcher-1.9.6.jar:/Users/elvira/.m2/repository/commons-validator/commons-validator/1.6/commons-validator-1.6.jar:/Users/elvira/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/Users/elvira/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/Users/elvira/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/elvira/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar:/Users/elvira/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/elvira/.m2/repository/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar:/Users/elvira/.m2/repository/org/springframework/spring-aop/5.0.5.RELEASE/spring-aop-5.0.5.RELEASE.jar:/Users/elvira/.m2/repository/org/springframework/spring-beans/5.0.5.RELEASE/spring-beans-5.0.5.RELEASE.jar:/Users/elvira/.m2/repository/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE.jar:/Users/elvira/.m2/repository/org/springframework/spring-jcl/5.0.5.RELEASE/spring-jcl-5.0.5.RELEASE.jar:/Users/elvira/.m2/repository/org/springframework/spring-expression/5.0.5.RELEASE/spring-expression-5.0.5.RELEASE.jar:/Users/elvira/.m2/repository/org/openpnp/opencv/3.2.0-1/opencv-3.2.0-1.jar:/Users/elvira/.m2/repository/io/qameta/allure/allure-junit4/2.8.1/allure-junit4-2.8.1.jar:/Users/elvira/.m2/repository/io/qameta/allure/allure-java-commons/2.8.1/allure-java-commons-2.8.1.jar:/Users/elvira/.m2/repository/io/qameta/allure/allure-model/2.8.1/allure-model-2.8.1.jar:/Users/elvira/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar:/Users/elvira/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/elvira/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar:/Users/elvira/.m2/repository/org/apache/tika/tika-core/1.19.1/tika-core-1.19.1.jar:/Users/elvira/.m2/repository/org/aspectj/aspectjrt/1.9.1/aspectjrt-1.9.1.jar:/Users/elvira/.m2/repository/org/jooq/joor-java-8/0.9.9/joor-java-8-0.9.9.jar:/Users/elvira/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar:/Users/elvira/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/elvira/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/Users/elvira/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="allure.results.directory" value="/Users/elvira/JavaAppium/target/allure-results"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/elvira/JavaAppium/target/surefire/surefirebooter4006567907192192391.jar:/Users/elvira/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar"/>
+    <property name="surefire.real.class.path" value="/Users/elvira/JavaAppium/target/surefire/surefirebooter2871857128058816182.jar:/Users/elvira/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
@@ -63,9 +63,63 @@
     <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testAmountOfNotEmptySearch" classname="tests.SearchTests" time="5.444"/>
-  <testcase name="testAmountOfEmptySearch" classname="tests.SearchTests" time="2.691"/>
-  <testcase name="testCancelSearch" classname="tests.SearchTests" time="2.633"/>
-  <testcase name="testSearch" classname="tests.SearchTests" time="3.705"/>
-  <testcase name="testCheckCancelSearch" classname="tests.SearchTests" time="3.94"/>
+  <testcase name="testSaveTwoArticleAndDeleteOne" classname="tests.MyListsTests" time="57.628">
+    <error message="Expected condition failed: Cannot find article with title Humfry Payone&#10; (tried for 15 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: 
+Expected condition failed: Cannot find article with title Humfry Payone
+ (tried for 15 second(s) with 500 milliseconds interval)
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne_aroundBody2(MyListsTests.java:191)
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne(MyListsTests.java:93)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.xpath: //ul[contains(@class, 'watchlist')]//h3[contains(text(),'Humfry Payone')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'MacBook-Air-Elvira.local', ip: 'fe80:0:0:0:ff:51ba:38ec:2f32%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: driver.version: unknown
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne_aroundBody2(MyListsTests.java:191)
+	at tests.MyListsTests.testSaveTwoArticleAndDeleteOne(MyListsTests.java:93)
+</error>
+    <system-out><![CDATA[Method rotateScreenPortrait() does nothing for platformmobile_web
+Method closeArticle() do nothing for platform mobile_web
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 3747
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+янв 30, 2021 12:28:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testSaveFirstArticleToMyList" classname="tests.MyListsTests" time="32.743">
+    <error message="Expected condition failed: Cannot click button to remove article from saved&#10; (tried for 5 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: 
+Expected condition failed: Cannot click button to remove article from saved
+ (tried for 5 second(s) with 500 milliseconds interval)
+	at tests.MyListsTests.testSaveFirstArticleToMyList_aroundBody0(MyListsTests.java:82)
+	at tests.MyListsTests.testSaveFirstArticleToMyList(MyListsTests.java:30)
+Caused by: org.openqa.selenium.InvalidSelectorException: 
+invalid selector: Unable to locate an element with the xpath expression //ul[contains(@class, 'watchlist')]//h3[contains(text(),'Java (programming language)')]/../../[contains(@class, 'watched')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//ul[contains(@class, 'watchlist')]//h3[contains(text(),'Java (programming language)')]/../../[contains(@class, 'watched')]' is not a valid XPath expression.
+  (Session info: chrome=88.0.4324.96)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'MacBook-Air-Elvira.local', ip: 'fe80:0:0:0:ff:51ba:38ec:2f32%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /var/folders/zb/f4h_2h196bn...}, goog:chromeOptions: {debuggerAddress: localhost:50223}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 55a746b19591dc7c2537c4bdf47312a4
+*** Element info: {Using=xpath, value=//ul[contains(@class, 'watchlist')]//h3[contains(text(),'Java (programming language)')]/../../[contains(@class, 'watched')]}
+	at tests.MyListsTests.testSaveFirstArticleToMyList_aroundBody0(MyListsTests.java:82)
+	at tests.MyListsTests.testSaveFirstArticleToMyList(MyListsTests.java:30)
+</error>
+    <system-out><![CDATA[Method rotateScreenPortrait() does nothing for platformmobile_web
+The screenshot was taken: /Users/elvira/JavaAppium/article_title_screenshot.png
+The screenshot was taken: /Users/elvira/JavaAppium/article_title_screenshot.png
+Method closeArticle() do nothing for platform mobile_web
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 3013
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+янв 30, 2021 12:29:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
 </testsuite>

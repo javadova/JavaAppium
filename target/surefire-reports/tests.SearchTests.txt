@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tests.SearchTests
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.266 s - in tests.SearchTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.686 s - in tests.SearchTests
